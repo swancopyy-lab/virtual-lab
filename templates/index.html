@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Lab - Beaker Simulator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Virtual Laboratory</h1>
+        <div class="lab-section">
+            <div class="beaker-container">
+                <div class="beaker" id="beaker">
+                    <div class="liquid" id="liquid"></div>
+                </div>
+                <p id="volume-text">Volume: 0 mL</p>
+            </div>
+            
+            <div class="controls">
+                <h2>Controls</h2>
+                <button onclick="fillBeaker(50, 'water')">Fill with Water (50mL)</button>
+                <button onclick="fillBeaker(75, 'water')">Fill with Water (75mL)</button>
+                <button onclick="fillBeaker(100, 'acid')">Fill with Acid (100mL)</button>
+                <button onclick="emptyBeaker()">Empty Beaker</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
